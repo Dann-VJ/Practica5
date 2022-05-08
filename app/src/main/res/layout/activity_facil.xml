@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FacilActivity"
+    android:orientation="vertical"
+    android:weightSum="12">
+
+    <ImageView
+        android:id="@+id/iv_respuesta"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginVertical="15dp"
+        android:layout_weight="4"
+        android:src="@drawable/adivina" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+        android:text="Vidas Restantes:"
+        android:textColor="@color/black"
+        android:textSize="32dp"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/tv_corazon"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+        android:text="♥♥♥"
+        android:letterSpacing="0.5"
+        android:gravity="center"
+        android:layout_marginBottom="15dp"
+        android:textColor="@color/danger"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:orientation="horizontal"
+        android:layout_weight="3"
+        android:weightSum="12">
+
+        <TextView
+            android:id="@+id/tv_mensaje"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:textSize="20dp"
+            android:text="MENSAJE"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:background="#F1F2EB"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="12">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:hint="Adivina un número"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    app:endIconMode="clear_text"
+                    app:startIconDrawable="@drawable/ic_lightbulb"
+                    app:helperText="Ingresa un número del 1 al 10"
+                    app:helperTextTextColor="@color/teal_700">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiet_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="2"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btn_adivina"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    android:text="Adivinar"
+                    app:cornerRadius="26dp"
+                    android:layout_marginTop="47dp"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/black"
+            android:text="Adivina el número"
+            android:textSize="40dp" />
+
+        // Dificultad fácil
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_facil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fácil"
+            app:cornerRadius="26dp"
+            app:icon="@drawable/emoticon_excited"
+            app:iconGravity="top"
+            android:backgroundTint="@color/success"
+            android:layout_marginVertical="2dp"
+            android:paddingVertical="16dp"/>
+
+        // Dificultad dificil
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_dificil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Difícil"
+            app:cornerRadius="26dp"
+            app:icon="@drawable/robot_angry"
+            app:iconGravity="top"
+            android:backgroundTint="@color/danger"
+            android:layout_marginVertical="2dp"
+            android:paddingVertical="16dp"/>
+
+        // Reglas de juego
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_reglas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Cómo se juega?"
+            app:cornerRadius="26dp"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            app:icon="@drawable/help_circle"
+            app:iconGravity="end"
+            android:layout_marginVertical="8dp"
+            android:paddingVertical="16dp"/>
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
